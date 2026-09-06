@@ -78,11 +78,11 @@
     align-items:center;
     justify-content:center;
     gap: 8px;
-    padding: 16px 12px;
+    padding: 15px 12px 12px;
     background: transparent;
     border: none;
-    border-bottom: 3px solid transparent;
-    color: #C9D9DF;
+    border-bottom: 4px solid transparent;
+    color: #9FB6C0;
     font-family: inherit;
     font-size: 15px;
     font-weight: 700;
@@ -96,6 +96,7 @@
   }
   .tabbar-top button.active{
     color: #fff;
+    background: rgba(168,201,58,0.16);
     border-bottom-color: var(--green);
   }
 
@@ -336,12 +337,15 @@
     align-items: center;
     justify-content: center;
     gap: 3px;
-    padding: 10px 4px 8px;
+    margin: 6px 4px;
+    padding: 7px 4px 6px;
     background: none;
     border: none;
+    border-radius: 12px;
     font-family: inherit;
     color: var(--ink-soft);
     cursor: pointer;
+    transition: background .15s ease, color .15s ease;
   }
   .tabbar-bottom button .ico{
     font-size: 20px;
@@ -352,10 +356,11 @@
     font-weight: 700;
   }
   .tabbar-bottom button.active{
+    background: rgba(168,201,58,0.20);
     color: var(--green-deep);
   }
   .tabbar-bottom button.active .ico{
-    transform: translateY(-1px);
+    transform: translateY(-1px) scale(1.1);
   }
 
   /* ---------- Overview page ---------- */
@@ -752,7 +757,7 @@
           <li>入賞した作品には、チーム対抗戦のポイントが入ります！
             <ul>
               <li>撮影者＆写真に写っているメンバー（被写体）にもポイントが入ります</li>
-              <li>ポイントの詳しい配分ルールは後述します。気になる人は見てね</li>
+              <li>配分は運営側でよきに決めますので、気軽に撮影してください</li>
             </ul>
           </li>
         </ul>
@@ -762,9 +767,19 @@
       <div class="card court">
         <h2>📜 応募ルール</h2>
         <ol class="steps">
-          <li><b>提出方法：</b>LINEグループ「2026年秋合宿🎾」のLINEアルバム「フォトコンテスト📷」に写真を投稿してください。</li>
+          <li><b>提出方法：</b>LINEグループ「2026年秋合宿🎾」のLINEアルバム「フォトコンテスト」に写真を投稿してください。</li>
           <li><b>投稿枚数：</b>1人最大5枚までとします。</li>
           <li><b>提出期限：</b>14:30まで</li>
+        </ol>
+      </div>
+
+      <div class="card court">
+        <h2>📱 LINEアルバムへの投稿方法</h2>
+        <ol class="steps">
+          <li>LINEグループ「2026年秋合宿🎾」のトーク画面を開く</li>
+          <li>画面右上のメニュー（≡）をタップし、「アルバム」を選択</li>
+          <li>アルバム一覧から「フォトコンテスト」を選ぶ</li>
+          <li>右上の＋（追加）ボタンをタップし、端末から写真を選んでアップロード</li>
         </ol>
       </div>
 
@@ -814,35 +829,9 @@
           </div>
         </div>
 
-        <ul>
-          <li>撮影者と被写体メンバーで<b>50%ずつ</b>分配します</li>
-          <li>被写体メンバーが複数いる場合、被写体メンバーで獲得ptを分配します</li>
-          <li>うまく分配できない場合は、以下のように分配します
-            <ul>
-              <li>
-                <b>余りが発生する場合：</b>被写体メンバーにptを振り分け、余ったptは撮影者が獲得する
-                <div class="example-box">
-                  例）銀賞(10pt)で被写体メンバー3人の場合：<b>撮影者が5pt獲得</b>。被写体メンバーは1ptずつ獲得し、余った2ptを撮影者が獲得。結果、<b>撮影者7pt</b>、<b>被写体メンバー3人×1ptずつ</b>獲得。
-                </div>
-              </li>
-              <li>
-                <b>不足が発生する場合：</b>運営メンバーで被写体メンバーをランダムで選び、選ばれた被写体メンバーにptを付与する
-                <div class="example-box">
-                  例）銀賞で被写体メンバー6人の場合：<b>撮影者は5pt獲得</b>。被写体メンバー6人のうち、運営メンバーがランダムで5人を選定。選ばれた5人の被写体メンバーに<b>1ptずつ付与</b>。
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-
-        <div class="note-line">
-          <span>🤳</span>
-          <span>自撮り等で撮影者自身が写っている場合、撮影者は被写体メンバーとしてはカウントしません（被写体人数には含めず、撮影者枠のみ受け取ります）。</span>
-        </div>
-
         <div class="note-line">
           <span>💡</span>
-          <span>撮影者への感謝も込めて、撮影者にptが入りやすいようにしています。</span>
+          <span>撮影者・被写体メンバーへのポイント配分は、運営側でよきに（バランスよく）決定します。</span>
         </div>
       </div>
 
