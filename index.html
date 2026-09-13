@@ -221,6 +221,70 @@
     margin: 16px 0;
   }
 
+  .team-tabs{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .team-tab-btn{
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: background .15s ease, color .15s ease;
+  }
+  .team-tab-btn.active{
+    background: var(--court-deep);
+    color: #fff;
+    border-color: var(--court-deep);
+  }
+
+  .scroll-table-wrap{
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .member-table{
+    border-collapse: collapse;
+    width: max-content;
+    min-width: 100%;
+    font-size: 13px;
+  }
+  .member-table th, .member-table td{
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    white-space: nowrap;
+    text-align: left;
+  }
+  .member-table tr:last-child td{ border-bottom: none; }
+  .member-table th:last-child, .member-table td:last-child{ border-right: none; }
+  .member-table th{
+    background: #F4F1E8;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+  .member-table td:first-child, .member-table th:first-child{
+    position: sticky;
+    left: 0;
+    background: var(--paper);
+    font-weight: 700;
+    z-index: 1;
+  }
+  .member-table th:first-child{
+    background: #F4F1E8;
+    z-index: 3;
+  }
+
   .courts-table{
     width: 100%;
     border-collapse: collapse;
@@ -645,8 +709,8 @@
   <nav class="tabbar-top" aria-label="ページ切り替え">
     <div class="tabbar-top-inner">
       <button data-target="overview" class="tab-btn active"><span class="ico">📋</span>合宿概要</button>
-      <button data-target="teams" class="tab-btn"><span class="ico">👥</span>チーム情報</button>
       <button data-target="matches" class="tab-btn"><span class="ico">🎾</span>試合＆練習</button>
+      <button data-target="teams" class="tab-btn"><span class="ico">👥</span>チーム情報</button>
       <button data-target="photo" class="tab-btn"><span class="ico">📸</span>フォトコンテスト</button>
       <button data-target="minievent" class="tab-btn"><span class="ico">🎯</span>レクリエーション</button>
     </div>
@@ -777,13 +841,58 @@
 
     </section>
 
-    <!-- チーム情報（準備中） -->
+    <!-- チーム情報（仮） -->
     <section class="panel" id="panel-teams">
-      <div class="empty-state">
-        <span class="ico">👥</span>
-        <h2>チーム情報は近日公開</h2>
-        <p>チーム分けとメンバー一覧を準備中です。<br>もう少しお待ちください。</p>
+
+      <div class="page-hero">
+        <h1>チーム情報👥</h1>
       </div>
+
+      <div class="card">
+        <h2>🎾 テニス関連</h2>
+        <div class="team-tabs">
+          <button class="team-tab-btn active" data-team="a" onclick="showTeamTable('a')">Aチーム</button>
+          <button class="team-tab-btn" data-team="b" onclick="showTeamTable('b')">Bチーム</button>
+        </div>
+
+        <div class="scroll-table-wrap team-table-panel" id="team-table-a">
+          <table class="member-table">
+            <tr><th>名前</th><th>得意</th><th>苦手</th><th>目指すプレー</th></tr>
+            <tr><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+            <tr><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+            <tr><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+            <tr><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+          </table>
+        </div>
+
+        <div class="scroll-table-wrap team-table-panel" id="team-table-b" style="display:none;">
+          <table class="member-table">
+            <tr><th>名前</th><th>得意</th><th>苦手</th><th>目指すプレー</th></tr>
+            <tr><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+            <tr><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+            <tr><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+            <tr><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="card court">
+        <h2>🎈 テニス以外</h2>
+        <div class="scroll-table-wrap">
+          <table class="member-table">
+            <tr><th>名前</th><th>チーム</th><th>出身地</th><th>好きなこと</th><th>子供の時の夢</th><th>クルマの選び方</th></tr>
+            <tr><td>xx</td><td>A</td><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+            <tr><td>xx</td><td>A</td><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+            <tr><td>xx</td><td>A</td><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+            <tr><td>xx</td><td>A</td><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+            <tr><td>xx</td><td>B</td><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+            <tr><td>xx</td><td>B</td><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+            <tr><td>xx</td><td>B</td><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+            <tr><td>xx</td><td>B</td><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+          </table>
+        </div>
+      </div>
+
     </section>
 
     <!-- 試合＆練習 -->
@@ -880,16 +989,16 @@
           </tr>
           <tr>
             <td class="ct-time">14:00<br>–14:30</td>
-            <td rowspan="3" class="ct-freeplay">フリー<br>練習・試合など<span class="ct-note">※チーム混合OK</span></td>
-            <td colspan="3" class="ct-green">試合⑦（30分）</td>
+            <td colspan="2" rowspan="3" class="ct-freeplay">フリー<br>練習・試合など<span class="ct-note">※チーム混合OK</span></td>
+            <td colspan="2" class="ct-green">試合⑦（30分）</td>
           </tr>
           <tr>
             <td class="ct-time">14:30<br>–15:00</td>
-            <td colspan="3" class="ct-green">試合⑧（30分）</td>
+            <td colspan="2" class="ct-green">試合⑧（30分）</td>
           </tr>
           <tr>
             <td class="ct-time">15:00<br>–15:30</td>
-            <td colspan="3" class="ct-green">試合⑨（30分）</td>
+            <td colspan="2" class="ct-green">試合⑨（30分）</td>
           </tr>
           <tr>
             <td class="ct-time">15:30<br>–16:00</td>
@@ -976,15 +1085,15 @@
         <div class="medal-row">
           <div class="medal-chip gold">
             <span class="medal-name">🥇 金賞</span>
-            <span class="medal-pt">6pt</span>
+            <span class="medal-pt">12pt</span>
           </div>
           <div class="medal-chip silver">
             <span class="medal-name">🥈 銀賞</span>
-            <span class="medal-pt">4pt</span>
+            <span class="medal-pt">10pt</span>
           </div>
           <div class="medal-chip bronze">
             <span class="medal-name">🥉 銅賞</span>
-            <span class="medal-pt">2pt</span>
+            <span class="medal-pt">8pt</span>
           </div>
         </div>
 
@@ -1068,11 +1177,11 @@
     <button data-target="overview" class="tab-btn active">
       <span class="ico">📋</span><span class="label">合宿概要</span>
     </button>
-    <button data-target="teams" class="tab-btn">
-      <span class="ico">👥</span><span class="label">チーム情報</span>
-    </button>
     <button data-target="matches" class="tab-btn">
       <span class="ico">🎾</span><span class="label">試合＆練習</span>
+    </button>
+    <button data-target="teams" class="tab-btn">
+      <span class="ico">👥</span><span class="label">チーム情報</span>
     </button>
     <button data-target="photo" class="tab-btn">
       <span class="ico">📸</span><span class="label">フォトコンテスト</span>
@@ -1105,6 +1214,12 @@
   function closeMap(){
     document.getElementById('mapModal').classList.remove('open');
     document.getElementById('mapFrame').src = '';
+  }
+
+  function showTeamTable(team){
+    document.getElementById('team-table-a').style.display = (team === 'a') ? '' : 'none';
+    document.getElementById('team-table-b').style.display = (team === 'b') ? '' : 'none';
+    document.querySelectorAll('.team-tab-btn').forEach(b => b.classList.toggle('active', b.dataset.team === team));
   }
 </script>
 
