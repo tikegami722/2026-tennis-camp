@@ -284,6 +284,12 @@
     background: #F4F1E8;
     z-index: 3;
   }
+  .member-table .wrap-col{
+    white-space: normal;
+    word-break: break-word;
+    width: 140px;
+    max-width: 140px;
+  }
 
   .courts-table{
     width: 100%;
@@ -767,8 +773,8 @@
           <div class="sched-row plain"><span class="sched-time">08:30ごろ</span><span class="sched-content">那須野が原公園 テニスコート集合</span></div>
           <div class="sched-row plain"><span class="sched-time">08:30–09:15</span><span class="sched-content">設営＆アップ</span></div>
           <div class="sched-row orange"><span class="sched-time">09:15–09:30</span><span class="sched-content">秋合宿説明＆記念撮影</span></div>
-          <div class="sched-row green clickable" data-target="matches"><span class="sched-time">09:30–12:30</span><span class="sched-content">テニス</span></div>
-          <div class="sched-row orange"><span class="sched-time">12:30–13:30</span><span class="sched-content">昼食（各自準備したもの）</span></div>
+          <div class="sched-row green clickable" data-target="matches"><span class="sched-time">09:30–12:45</span><span class="sched-content">テニス</span></div>
+          <div class="sched-row orange"><span class="sched-time">12:45–13:30</span><span class="sched-content">昼食（各自準備したもの）</span></div>
           <div class="sched-row yellow clickable" data-target="minievent"><span class="sched-time">13:30–14:00</span><span class="sched-content">レクリエーション</span></div>
           <div class="sched-row green clickable" data-target="matches"><span class="sched-time">14:00–15:30</span><span class="sched-content">テニス</span></div>
           <div class="sched-row orange"><span class="sched-time">15:30–16:00</span><span class="sched-content">結果発表＆記念撮影</span></div>
@@ -857,21 +863,29 @@
 
         <div class="scroll-table-wrap team-table-panel" id="team-table-a">
           <table class="member-table">
-            <tr><th>名前</th><th>得意</th><th>苦手</th><th>目指すプレー</th></tr>
-            <tr><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
-            <tr><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
-            <tr><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
-            <tr><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+            <tr><th>名前</th><th>得意</th><th class="wrap-col">苦手</th><th>目指すプレー</th></tr>
+            <tr><td>石橋</td><td>ストローク、スマッシュ、ロブ</td><td class="wrap-col">バックハイボレー、ポーチ、サーブ</td><td>得点とれるポーチ</td></tr>
+            <tr><td>村松</td><td>フォアハンドストローク　フォアハンドポーチ</td><td class="wrap-col">高い打点のバックハンドストローク　下がりながらのスマッシュ　ハーフボレー</td><td>省エネプレー＆強いボールに頼らずにポイントを取れるスタイル</td></tr>
+            <tr><td>陳</td><td>オールラウンダー(¬‿¬)</td><td class="wrap-col">正面に来たボールをボレーで返す</td><td>セカンドサーブ100％入れる</td></tr>
+            <tr><td>中島</td><td>サーブ、フォアハンド逆クロス</td><td class="wrap-col">高い打点のバックハンドストローク、ボレー全般</td><td>サーブ＆ボレー</td></tr>
+            <tr><td>秀島</td><td>ない</td><td class="wrap-col">ハイバックボレー、スマッシュ</td><td>安定したストローカー</td></tr>
+            <tr><td>山本</td><td>ストレートカウンター、フォアハンド</td><td class="wrap-col">バックハイボレー</td><td>サーブ&amp;ボレー</td></tr>
+            <tr><td>張一帆</td><td>フォアストローク、ボレー</td><td class="wrap-col">早いハックバンドストローク</td><td>サーブ&amp;ボレー</td></tr>
+            <tr><td>松本</td><td>―</td><td class="wrap-col">―</td><td>―</td></tr>
           </table>
         </div>
 
         <div class="scroll-table-wrap team-table-panel" id="team-table-b" style="display:none;">
           <table class="member-table">
-            <tr><th>名前</th><th>得意</th><th>苦手</th><th>目指すプレー</th></tr>
-            <tr><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
-            <tr><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
-            <tr><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
-            <tr><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+            <tr><th>名前</th><th>得意</th><th class="wrap-col">苦手</th><th>目指すプレー</th></tr>
+            <tr><td>池上</td><td>バックハンドストローク、サーブ、スライス</td><td class="wrap-col">フォアへの緩いボール、ボレー</td><td>サーブ+1（サーブアンドボレーとか）</td></tr>
+            <tr><td>小林</td><td>フォアのストレート、バックハンドのスライス</td><td class="wrap-col">両手バックハンド</td><td>いろいろできるプレースタイル</td></tr>
+            <tr><td>王</td><td>なし...</td><td class="wrap-col">正面に来たボールなど</td><td>まずゲームできるくらいになりたい...</td></tr>
+            <tr><td>野口</td><td>バックハンドロブ</td><td class="wrap-col">スマッシュ、バックハンドハイボレー</td><td>省エネ</td></tr>
+            <tr><td>澤</td><td>パックボレー</td><td class="wrap-col">深く早いストローク</td><td>ネットプレーヤー</td></tr>
+            <tr><td>磯</td><td>サービス、スマッシュ、ロブ</td><td class="wrap-col">バックハンドボレー、チャンスボール</td><td>強いて言えばサーブ＆ボレー</td></tr>
+            <tr><td>池内</td><td>―</td><td class="wrap-col">―</td><td>―</td></tr>
+            <tr><td>張暁蜜</td><td>―</td><td class="wrap-col">―</td><td>―</td></tr>
           </table>
         </div>
       </div>
@@ -880,15 +894,23 @@
         <h2>🎈 テニス以外</h2>
         <div class="scroll-table-wrap">
           <table class="member-table">
-            <tr><th>名前</th><th>チーム</th><th>出身地</th><th>好きなこと</th><th>子供の時の夢</th><th>クルマの選び方</th></tr>
-            <tr><td>xx</td><td>A</td><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
-            <tr><td>xx</td><td>A</td><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
-            <tr><td>xx</td><td>A</td><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
-            <tr><td>xx</td><td>A</td><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
-            <tr><td>xx</td><td>B</td><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
-            <tr><td>xx</td><td>B</td><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
-            <tr><td>xx</td><td>B</td><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
-            <tr><td>xx</td><td>B</td><td>xx</td><td>xx</td><td>xx</td><td>xx</td></tr>
+            <tr><th>名前</th><th>チーム</th><th>出身地</th><th class="wrap-col">好きなこと</th><th>子供の時の夢</th><th>クルマの選び方</th></tr>
+            <tr><td>石橋</td><td>A</td><td>青森県 八戸市</td><td class="wrap-col">動物、ゲーム、トマト、プール</td><td>クラゲ、マンボウ</td><td>デザイン</td></tr>
+            <tr><td>村松</td><td>A</td><td>愛知県</td><td class="wrap-col">ゲーム、読書</td><td>スポーツ選手、月に行くこと</td><td>機能</td></tr>
+            <tr><td>陳</td><td>A</td><td>中国 四川省</td><td class="wrap-col">御朱印</td><td>お金持ちになる</td><td>デザイン</td></tr>
+            <tr><td>中島</td><td>A</td><td>三重県 津市</td><td class="wrap-col">ウィンドサーフィン</td><td>車のデザイナー</td><td>デザイン</td></tr>
+            <tr><td>秀島</td><td>A</td><td>福岡県</td><td class="wrap-col">スキー</td><td>えらいひと</td><td>デザイン</td></tr>
+            <tr><td>山本</td><td>A</td><td>熊本県 球磨郡</td><td class="wrap-col">写真、ビートでドライブ</td><td>大工さん</td><td>機能</td></tr>
+            <tr><td>張一帆</td><td>A</td><td>中国 瀋陽</td><td class="wrap-col">太極拳、書道、囲碁</td><td>覚えていない</td><td>機能</td></tr>
+            <tr><td>松本</td><td>A</td><td>―</td><td class="wrap-col">―</td><td>―</td><td>―</td></tr>
+            <tr><td>池上</td><td>B</td><td>東京都</td><td class="wrap-col">犬、ドライブ、登山、カフェ、読書、AIと遊ぶ</td><td>画家！</td><td>デザイン</td></tr>
+            <tr><td>小林</td><td>B</td><td>東京都</td><td class="wrap-col">ゴルフ、ガーデニング、マージャン、登山、クルマ修理、旅行、音楽鑑賞</td><td>自動車のデザイナー</td><td>デザイン</td></tr>
+            <tr><td>王</td><td>B</td><td>中国・雲南</td><td class="wrap-col">辛い料理、旅行、猫ちゃん</td><td>―</td><td>デザイン</td></tr>
+            <tr><td>野口</td><td>B</td><td>徳島県徳島市</td><td class="wrap-col">スプラトゥーン</td><td>パイロット</td><td>デザイン</td></tr>
+            <tr><td>澤</td><td>B</td><td>鳥取県 鳥取市</td><td class="wrap-col">ゴルフ</td><td>―</td><td>機能</td></tr>
+            <tr><td>磯</td><td>B</td><td>埼玉県 富士見市</td><td class="wrap-col">スポーツ全般</td><td>ハッキリしたモノは無かったような。</td><td>機能</td></tr>
+            <tr><td>池内</td><td>B</td><td>―</td><td class="wrap-col">―</td><td>―</td><td>―</td></tr>
+            <tr><td>張暁蜜</td><td>B</td><td>―</td><td class="wrap-col">―</td><td>―</td><td>―</td></tr>
           </table>
         </div>
       </div>
@@ -951,7 +973,7 @@
           </tr>
           <tr>
             <td class="ct-time">09:30<br>–10:00</td>
-            <td rowspan="3" class="ct-peach">練習<br>（初級）（90分）</td>
+            <td rowspan="3" class="ct-peach">練習<br>（初中級）（90分）</td>
             <td colspan="3" class="ct-green">試合①（30分）</td>
           </tr>
           <tr>
@@ -968,7 +990,7 @@
           </tr>
           <tr>
             <td class="ct-time">11:15<br>–11:45</td>
-            <td rowspan="3" class="ct-peach">練習<br>（初中級）（90分）</td>
+            <td rowspan="3" class="ct-peach">練習<br>（初級）（90分）</td>
             <td colspan="3" class="ct-green">試合④（30分）</td>
           </tr>
           <tr>
